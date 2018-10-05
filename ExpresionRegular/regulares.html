@@ -6,37 +6,51 @@
 	</head>
 	<body>
 		<form id="miForm" action="" method="get">
+			<h1>Formulario Expresiones</h1>
     		<p>
     			Nombre: <input type="text" id="nombre">
-    	    	<br>
+    	    	<input type="button" value="Validar Nombre" onclick="Nombre()"><br>
     	    	Telefono: <input type="text" id="telefono">
+    	    	<input type="button" value="Validar Telefono" onclick="Telefono()"><br>
+       			Placa: <input type="text" id="matricula">
+    	    	<input type="button" value="Validar Placa" onclick="Placa()"><br>
     	    	<br>
-       			Matrícula: <input type="text" id="matricula">
     	    	<br>
-    	    	<input type="button" value="Literal" onclick="Validar_Placa()">
-    	    	<input type="button" value="Objeto" onclick="objeto()">
+    	    	<input type="button" value="Enviar Formulario" onclick="Placa()">
+    	    	    	    	
      		</p>
     	</form>
 
 		<script type="text/javascript">
-			function Validar_Placa() {
-			    var m = document.getElementById("matricula").value;
-			        var expreg = /[A-Z]{3}\s\d{3}\s$/;
 
-			        if(expreg.test(m))
-			        alert("La matrícula es correcta");    else
-			            alert("La matrícula NO es correcta");
-			        }
-    
-    		function objeto() { 
-    		var m = document.getElementById("matricula").value;
+    		function Nombre() { 
+    		var n = document.getElementById("nombre").value;
     		var expreg = new RegExp("^[A-Z]{1,2}\\s\\d{4}\\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$");
     
-    		if(expreg.test(m)) 
-    			alert("La matrícula es correcta");
+    		if(expreg.test(n))
+    			alert("El nombre es correcto");
     		else
-    			alert("La matrícula NO es correcta");
+    			alert("El nombre NO es correcto");
     			}
+
+			function Telefono() {
+		    var t = document.getElementById("telefono").value;
+	        var expreg = /\S\d{7}$/;
+
+	        if(expreg.test(t))
+		        alert("La telefono es correcto");    else
+	            alert("La telefono NO es correcto");
+	        }
+
+			function Placa() {
+		    var m = document.getElementById("matricula").value;
+	        var expreg = /[A-Z]{3}\s\d{3}$/;
+
+	        if(expreg.test(m))
+		        alert("La Placa es correcta");    else
+	            alert("La Placa NO es correcta");
+	        }
+    
     
 		</script>
 	</body>
