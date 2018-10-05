@@ -7,17 +7,21 @@
 	<body>
 		<form id="miForm" action="" method="get">
     		<p>
+    			Nombre: <input type="text" id="nombre">
+    	    	<br>
+    	    	Telefono: <input type="text" id="telefono">
+    	    	<br>
        			Matrícula: <input type="text" id="matricula">
     	    	<br>
-    	    	<input type="button" value="Literal" onclick="literal()">
+    	    	<input type="button" value="Literal" onclick="Validar_Placa()">
     	    	<input type="button" value="Objeto" onclick="objeto()">
      		</p>
     	</form>
 
 		<script type="text/javascript">
-			function literal() {
+			function Validar_Placa() {
 			    var m = document.getElementById("matricula").value;
-			        var expreg = /[A-Z]/;
+			        var expreg = /[A-Z]{3}\s\d{3}\s$/;
 
 			        if(expreg.test(m))
 			        alert("La matrícula es correcta");    else
