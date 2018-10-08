@@ -35,11 +35,11 @@
 
 			function Telefono() {
 		    var t = document.getElementById("telefono").value;
-	        var expreg = /[0-9]\S\d{10}$/;
+	        var expreg = /^[0-9]{10}$/;
 
 	        if(expreg.test(t))
-		        alert("La telefono es correcto");    else
-	            alert("La telefono NO es correcto");
+		        alert("El telefono es correcto");    else
+	            alert("El telefono NO es correcto");
 	        }
 
 			function Placa() {
@@ -50,9 +50,8 @@
 		        alert("La Placa es correcta");    else
 	            alert("La Placa NO es correcta");
 	        }
-    
-    
-		</script>
+
+    		</script>
 	</body>
 </html>
 
