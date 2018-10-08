@@ -35,7 +35,7 @@
 
 			function Telefono() {
 		    var t = document.getElementById("telefono").value;
-	        var expreg = /\S\d{7}$/;
+	        var expreg = /[0-9]\S\d{10}$/;
 
 	        if(expreg.test(t))
 		        alert("La telefono es correcto");    else
