@@ -21,11 +21,11 @@
      		</p>
     	</form>
 
-		<script type="text/javascript">
+		<script>
 
     		function Nombre() { 
     		var n = document.getElementById("nombre").value;
-    		var expreg = new RegExp("^[A-Z]{1,2}\\s\\d{4}\\s([B-D]|[F-H]|[J-N]|[P-T]|[V-Z]){3}$");
+    		var expreg = new RegExp("[A-Z]{20}\\s\\$");
     
     		if(expreg.test(n))
     			alert("El nombre es correcto");
