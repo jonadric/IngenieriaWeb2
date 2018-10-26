@@ -30,7 +30,7 @@
 
     		function Nombre() { 
     		var n = document.getElementById("nombre").value;
-    		var expreg = new RegExp("[A-Z]{20}\\s\\$");
+    		var expreg = /[A-Z]{3}\s\d{3}$/;
     
     		if(expreg.test(n))
     			alert("El nombre es correcto");
